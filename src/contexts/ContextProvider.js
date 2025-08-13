@@ -1,4 +1,4 @@
-import React, { createContext, use, useContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 import { cartData } from "../data/dummy";
 
 const StateContext = createContext();
@@ -13,6 +13,13 @@ const initialState = {
 export const ContextProvider = ({ children }) => {
 
     const [activeMenu, setActiveMenu] = useState(true);
+    const [isClicked, setIsClicked] = useState(initialState)
+
+    const handlerClick = (clicked) => {
+        setIsClicked({ ...initialState, [clicked] :true  })
+    }
+
+    const [screenSize, setScreenSize] = useState(undefined)
 
 
     return (
@@ -20,6 +27,11 @@ export const ContextProvider = ({ children }) => {
             value={{
                 activeMenu: activeMenu,
                 setActiveMenu: setActiveMenu,
+                isClicked: isClicked,
+                setIsClicked: setIsClicked,
+                handlerClick: handlerClick,
+                screenSize: screenSize,
+                setScreenSize: setScreenSize,
             }}
         >
             {children}
