@@ -40,7 +40,7 @@ module.exports = {
       },
       backgroundImage: {
         'hero-pattern':
-          "url('https://i.ibb.co/MkvLDfb/Rectangle-4389.png')",
+          "url('https://media.istockphoto.com/id/1298368944/es/foto/imagen-compuesta-de-bitcoin.jpg?s=2048x2048&w=is&k=20&c=Qmjl9vHSD8xVOT-McyM0tzGXIceo_jMoCzfrkKnx-Zw=')",
       },
     },
   },
